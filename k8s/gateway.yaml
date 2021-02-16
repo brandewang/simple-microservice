@@ -1,18 +1,18 @@
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: gateway 
-  namespace: ms 
-spec:
-  rules:
-    - host: gateway.ctnrs.com 
-      http:
-        paths:
-        - path: /
-          backend:
-            serviceName: gateway
-            servicePort: 9999
+#---
+#apiVersion: extensions/v1beta1
+#kind: Ingress
+#metadata:
+#  name: gateway 
+#  namespace: ms 
+#spec:
+#  rules:
+#    - host: gateway.ctnrs.com 
+#      http:
+#        paths:
+#        - path: /
+#          backend:
+#            serviceName: gateway
+#            servicePort: 9999
 ---
 apiVersion: v1
 kind: Service
@@ -48,7 +48,7 @@ spec:
       - name: registry-pull-secret
       containers:
       - name: gateway
-        image: 192.168.31.70/microservice/gateway:2019-07-10-21-26-23
+        image: harbor.corp.gihtg.com/ms/gateway
         imagePullPolicy: Always
         ports:
           - protocol: TCP

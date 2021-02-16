@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://192.168.31.70:3306/tb_product?characterEncoding=utf-8
+    url: jdbc:mysql://ms-mysql.ms.svc.cluster.local:3306/tb_product?characterEncoding=utf-8
     username: root
-    password: 123456
+    password: gihtg@123
     driver-class-name: com.mysql.jdbc.Driver
 
 eureka:
